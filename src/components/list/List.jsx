@@ -1,13 +1,14 @@
 import { ArrowBackIosOutlined, ArrowForwardIosOutlined } from '@material-ui/icons'
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
+import { api } from '../../env/api'
 import ListItem from '../listItem/ListItem'
 import "./list.scss"
 
 const List = ({ name, type, genre }) => {
     // const [moved, setMoved]= useState(0);
     const [slideNumber, setSlideNumber] = useState(0);
-    // console.log(`this is my api key : ${process.env.REACT_APP_API_KEY}`);
+    // console.log(`this is my api key : ${api}`);
     console.log({ name, type, genre })
     const [data, setData] = useState([]);
 
@@ -31,13 +32,13 @@ const List = ({ name, type, genre }) => {
         const fetchData = async () => {
             try {
                 if (name === "Popular on JMedia") {
-                    setApiKey(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${process.env.REACT_APP_API_KEY}`)
+                    setApiKey(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`)
                 }
                 else if(name==="Continue to Watch"){
-                    setApiKey(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${process.env.REACT_APP_API_KEY}`)
+                    setApiKey(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`)
                 }
                 else{
-                    setApiKey(`https://api.themoviedb.org/3/trending/${type}/week?api_key=${process.env.REACT_APP_API_KEY}`)
+                    setApiKey(`https://api.themoviedb.org/3/trending/${type}/week?api_key=${api}`)
                 }
                 const data = await axios.get(`${apiKey}`);
                 setData(data.data.results);

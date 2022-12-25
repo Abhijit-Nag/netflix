@@ -1,6 +1,7 @@
 import { InfoOutlined, PlayArrow } from '@material-ui/icons'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { api } from '../../env/api'
 import "./featured.scss"
 
 const Featured = ({ type , setGenre}) => {
@@ -9,7 +10,7 @@ const Featured = ({ type , setGenre}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
+        const data = await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${api}&language=en-US`);
         console.log(data.data.genres[1]);
         setGenres(data.data.genres);
       } catch (err) {
