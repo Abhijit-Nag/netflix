@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/mainPage/MainPage";
 import Video from "./components/video/Video";
 function App() {
+  console.log(`this is the api in app_js file : ${process.env.REACT_APP_API_KEY}`)
   return (
     // <Home/>
     <BrowserRouter>
