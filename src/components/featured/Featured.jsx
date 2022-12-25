@@ -7,7 +7,6 @@ import "./featured.scss"
 const Featured = ({ type , setGenre}) => {
   const [genres, setGenres] = useState([]);
 
- 
   useEffect(() => {
     const fetchData = async () => {
       try {
