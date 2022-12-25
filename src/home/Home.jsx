@@ -8,16 +8,18 @@ import "./home.scss"
 
 
 const Home = () => {
-  const [type, setType]= useState("");
+  const [type, setType]= useState("movie");
+  const [genre, setGenre]= useState(35);
+  console.log(`this is the genre selected : ${genre} this is the type: ${type}`)
   return (
     <div className='home'>
         <Navbar setType={setType} />
         
-         <Featured type={type} />
-         <List name="Continue to Watch" />
-         <List name="Popular on JMedia" />
-         <List name="Popular in your Country" />
-         <List name="Finish this weekend" />
+         <Featured type={type} setGenre={setGenre} />
+         <List name="Continue to Watch" type={type} genre={genre} />
+         <List name="Popular on JMedia" type={type} genre={genre} />
+         <List name="Popular in your Country" type={type} genre={genre} />
+         <List name="Finish this weekend" type={type} genre={genre} />
          <Footer/>
         
     </div>

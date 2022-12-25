@@ -66,9 +66,22 @@
             color: white;
         }
     }
-    h2{
-        margin-left: 82px;
-        margin-top: 20px;
-        
+
+    .bottomLine{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2{
+            margin-left: 82px;
+            margin-top: 20px;
+            
+        }
+
+        h3{
+            font-family: kalam;
+        }
     }
+    
 }

@@ -25,9 +25,9 @@ const Navbar = ({setType}) => {
                     <div className="logo">
                         JMedia+
                     </div>
-                    <span onClick={()=>setType("")}>Homepage</span>
-                    <span onClick={()=> setType("Series")}>Series</span>
-                    <span onClick={()=> setType("Movies")}>Movies</span>
+                    <span onClick={()=>setType("movie")}>Homepage</span>
+                    <span onClick={()=> setType("tv")}>Series</span>
+                    <span onClick={()=> setType("movie")}>Movies</span>
                     <span>New and Popular</span>
                     <span>My List</span>
                 </div>

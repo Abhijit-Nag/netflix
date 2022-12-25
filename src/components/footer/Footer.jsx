@@ -42,7 +42,11 @@ const Footer = () => {
                 
             </div>
 
-            <h2>JMedia+</h2>
+            <div className='bottomLine' >
+                <h2>JMedia+</h2>
+            <h3>All Rights Reserved ® JMedia Corporation</h3>
+            </div>
+            
 
         </div>
     )
