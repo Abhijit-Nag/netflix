@@ -10,6 +10,7 @@ const Login = () => {
 
         <h1 className="logo">JMedia+</h1>
         </div>
+        {/* making cards */}
         <div className="card">
             <div className="title">Sign In</div>
             <input type="text" placeholder='Email or Phone number'/>
